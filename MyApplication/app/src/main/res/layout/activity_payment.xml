@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red"
+    tools:context="com.example.peter.myapplication.PaymentActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/paymentToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:textAlignment="inherit">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAYMENT"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title"
+                android:fontFamily="sans-serif"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:textStyle="normal|bold"
+                android:textAllCaps="false" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/itemName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+
+        <LinearLayout
+            android:background="@drawable/roundtext"
+            android:layout_width="match_parent"
+            android:id="@+id/cardInfo"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_below="@+id/itemName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <EditText
+                android:id="@+id/etCardNum"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Card number"
+                android:inputType="phone"
+                android:padding="16dp"
+                android:maxLength="19"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:ignore="LabelFor,NegativeMargin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="NegativeMargin">
+
+                <EditText
+                    android:id="@+id/etExpire"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="MM/YY"
+                    android:inputType="date"
+                    android:padding="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:ignore="LabelFor,RtlHardcoded" />
+
+                <EditText
+                    android:id="@+id/etCVC"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="CVC"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:padding="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:ignore="LabelFor,RtlHardcoded" />
+            </LinearLayout>
+        </LinearLayout>
+        <RadioButton
+            android:text="Visa"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/cardInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbVisa"
+            android:buttonTint="@color/white"
+            android:textColor="@color/orange"
+            android:textStyle="normal|bold" />
+
+        <RadioButton
+            android:text="MasterCard"
+            android:layout_toRightOf="@id/rbVisa"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/cardInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbMaster"
+            android:buttonTint="@color/white"
+            android:textColor="@color/orange"
+            android:textStyle="normal|bold"/>
+
+        <RadioButton
+            android:text="American Express"
+            android:layout_toRightOf="@id/rbMaster"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/cardInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbAmex"
+            android:buttonTint="@color/white"
+            android:textColor="@color/orange"
+            android:textStyle="normal|bold"/>
+
+        <Button
+            android:id="@+id/btPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/rbVisa"
+            android:text="PLACE ORDER"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:background="@drawable/roundbutton"
+            android:fontFamily="sans-serif"
+            android:typeface="normal"
+            android:textStyle="normal|bold"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+</LinearLayout>

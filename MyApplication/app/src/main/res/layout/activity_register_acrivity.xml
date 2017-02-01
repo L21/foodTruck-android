@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/red"
+    tools:context="com.example.peter.myapplication.RegisterActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_height="150dp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/etEmail"
+        android:layout_below="@id/imageView"
+        android:hint="@string/prompt_email"
+        android:imeOptions="actionNext"
+        android:background="@drawable/roundtext"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/etPhone"
+        android:hint="phone number"
+        android:imeOptions="actionNext"
+        android:background="@drawable/roundtext"
+        android:layout_below="@id/etEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_below="@id/etPhone"
+        android:ems="10"
+        android:id="@+id/etPassword"
+        android:imeOptions="actionNext"
+        android:hint="password (at least 8 characters)"
+        android:background="@drawable/roundtext"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-condensed" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/etPasswordValidation"
+        android:hint="confirm password"
+        android:imeOptions="actionGo"
+        android:background="@drawable/roundtext"
+        android:layout_below="@id/etPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif" />
+
+    <Button
+        android:text="SIGN ME UP!"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bSignup"
+        android:background="@drawable/roundbutton"
+        android:layout_below="@+id/etPasswordValidation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif" />
+
+    <TextView
+        android:text="Got an account? Log in here!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLogin"
+
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:layout_below="@+id/bSignup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="normal|italic" />
+
+</RelativeLayout>
